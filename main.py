@@ -1,48 +1,32 @@
-#-- =========================================== #
-#--                   Imports                   #
-#-- =========================================== #
 from selenium.webdriver.common.by import By 
 import time
 import data
 import driver_setup
 import functions
 
+#Simplifies Data Tag
 driver = driver_setup.driver
 
-#-- =========================================== #
-#--             Entering Information            #
-#-- =========================================== #
-
-#Find and enter the email
+#Finds and enters the Email using #data
 functions.info_enter(driver, By, time, "username", data.email)
 
-#Find and enter the password
+#Finds and enters the Password using #data
 functions.info_enter(driver, By, time, "password", data.password)
 
-#-- =========================================== #
-#--               Clicking Buttons              #
-#-- =========================================== #
-
-#Clicking login button
+#Clicks the Login Button
 functions.click(driver, By, time, ".sr1l9xy.primary.b17wp39w")
 
-#Clicking Confirm Button
+#Clicks the Confirm Button
 functions.click(driver, By, time, ".s13pardp.l133n852.sr1l9xy.primary.b17wp39w")
 
-#-- =========================================== #
-#--                A2 Page Redirect             #
-#-- =========================================== #
+#Transfers to Nicos Weg A2 German Page
 driver.get(data.A2_url)
-time.sleep(1)
+time.sleep(0.5)
 
-#-- =========================================== #
-#--           Find and Print Data               #
-#-- =========================================== #
-
-# Find and print the scores
+#Finds the Lesson Title's and Scores
 scores = driver.find_elements(By.CSS_SELECTOR, ".s1l6w876.d1sa64gj")
 titles = driver.find_elements(By.CLASS_NAME, "t1duk5k2")
 
-#combines both variables and prints the data
+#Combines and Prints previous Properties into one list
 for score, title in zip(scores, titles):
     print(title.text, score.text)
