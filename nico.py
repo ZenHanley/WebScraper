@@ -18,10 +18,15 @@ driver.get(url)
 driver.maximize_window()
 
 # Wait for the page to load completely
-time.sleep(5)
+time.sleep(3)
 
 # Find and print the titles of the lessons
 titles = driver.find_elements(By.CLASS_NAME, "t1duk5k2")
-
 for title in titles:
     print(title.text)
+
+main = driver.find_elements(By.XPATH, '//*[@id="courses"]/section[2]/section[1]/div/ul/div/li[1]/a/div[2]/div[2]')
+for m in main:
+    scores = m.find_elements(By.TAG_NAME, "span")
+    for s in scores:
+        print(s.text)
