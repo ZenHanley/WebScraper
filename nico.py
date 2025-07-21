@@ -25,8 +25,8 @@ titles = driver.find_elements(By.CLASS_NAME, "t1duk5k2")
 for title in titles:
     print(title.text)
 
-main = driver.find_elements(By.XPATH, '//*[@id="courses"]/section[2]/section[1]/div/ul/div/li[1]/a/div[2]/div[2]')
-for m in main:
-    scores = m.find_elements(By.TAG_NAME, "span")
+scores = driver.find_elements(By.CLASS_NAME, "s1l6w876 d1sa64gj")                
+for score in scores:
+    scores = s.find_elements(By.TAG_NAME, "span")
     for s in scores:
         print(s.text)
