@@ -27,6 +27,6 @@ time.sleep(0.5)
 scores = driver.find_elements(By.CSS_SELECTOR, ".s1l6w876.d1sa64gj")
 titles = driver.find_elements(By.CLASS_NAME, "t1duk5k2")
 
-#Combines and Prints previous Properties into one list
+#Combines and Prints previous Properties into one List
 for score, title in zip(scores, titles):
     print(title.text, score.text)
