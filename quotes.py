@@ -1,14 +1,22 @@
-from bs4 import BeautifulSoup
-import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By  
+import time
 
-# Send a GET request to the specified URL
-response = requests.get("https://quotes.toscrape.com")
 
-# Parse the HTML content using BeautifulSoup
-soup = BeautifulSoup(response.text, 'html.parser')
+# Initialize the Chrome driver with the path to Chromedriver
+service = Service(executable_path="chromedriver.exe")
+driver =  webdriver.Chrome(service=service)
 
-# Extract the desired data from the soup object
-quotes = soup.find_all("span", attrs={"class":"text"})
+# Url to Nico's Weg A2
+url="https://learngerman.dw.com/en/nicos-weg/c-36519797"
 
-for quote in quotes:
-    print(quote.text)
+# Page load with Cloudflare bypass
+driver.get(url)
+
+# Wait for the page to load completely
+time.sleep(5)
+
+# Find the input element by its class name
+input_element = driver.find_element(By.CLASS_NAME, "ckvibhv")
+print(input_element)
