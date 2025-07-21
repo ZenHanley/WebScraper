@@ -1,17 +1,11 @@
-from bs4 import BeautifulSoup
-import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+import time
 
-# Define the URL to scrape
-url = "https://learngerman.dw.com/en/nicos-weg/c-36519797"
+service = Service(executable_path="chromedriver.exe")
+driver =  webdriver.Chrome(service=service)
 
-# Send a GET request to the URL
-page = requests.get(url)
+driver.get("https://learngerman.dw.com/en/nicos-weg/c-36519797")
 
-# Parse the HTML content using BeautifulSoup
-soup = BeautifulSoup(page.text, 'html.parser')
 
-# Extract the desired data from the soup object
-titles = soup.find_all("h3", attrs={"class":"t1duk5k2"})
 
-for title in titles:
-    print(title.text)
