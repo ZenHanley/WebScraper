@@ -21,7 +21,7 @@ driver.maximize_window()
 time.sleep(5)
 
 # Find and print the titles of the lessons
-title = driver.find_elements(By.CLASS_NAME, "t1duk5k2")
+titles = driver.find_elements(By.CLASS_NAME, "t1duk5k2")
 
-for t in title:
-    print(t.text)
+for title in titles:
+    print(title.text)
