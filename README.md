@@ -27,8 +27,8 @@ A user will need to click the play button at the top right of their screen
 <br>
 <img width="283" height="204" alt="Scraper_Guide_3" src="https://github.com/user-attachments/assets/8aedd2e1-72ed-4228-a87c-5b0bc287f86d" />
 <br>
-### Upon Completion ### 
-Of the data scanning, the *titles* and *scores* of the user will be displayed in the console
+### Upon Completion of the Data Scanning ### 
+The *titles* and *scores* of the user will be displayed in the console
 <br>
 <br>
 <img width="1582" height="563" alt="Scraper_Guide_4" src="https://github.com/user-attachments/assets/8ae762ba-c15c-4f7d-8ece-5e77ce7d22b7" />
