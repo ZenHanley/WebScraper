@@ -8,7 +8,6 @@ This project is made for collecting a users lesson **titles** and **scores** fro
 <br>
 <br>
 <br>
-<br>
 # Tutorial:
 ### To Begin ###
 A user simply needs navigate to the `#data` file, and then input their login credentials, this data is **not** saved, ensuring security
