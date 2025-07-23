@@ -1,8 +1,6 @@
-#-- =========================================== #
-#--                    Data                     #
-#-- =========================================== #
-# Url to Nico's Weg A2 # 
 start="https://learngerman.dw.com/en/user/login"
-email= "zenhanleyreisser@gmail.com"
-password= "Gragknock82"
+email= "example@gmail.com"
+password= "1234"
+A1_url="https://learngerman.dw.com/en/nicos-weg/c-36519789"
 A2_url="https://learngerman.dw.com/en/nicos-weg/c-36519797"
+B1_url="https://learngerman.dw.com/de/nicos-weg/c-36519718"

@@ -1,14 +1,7 @@
-#-- =========================================== #
-#--                  Imports                    #
-#-- =========================================== #
 import time
 import data
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-
-#-- =========================================== #
-#--           Set Service and Driver            #
-#-- =========================================== #
 
 # Initialize the Chrome driver with the path to Chromedriver
 service = Service(executable_path="chromedriver.exe")

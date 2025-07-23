@@ -20,7 +20,7 @@ functions.click(driver, By, time, ".sr1l9xy.primary.b17wp39w")
 functions.click(driver, By, time, ".s13pardp.l133n852.sr1l9xy.primary.b17wp39w")
 
 #Transfers to Nicos Weg A2 German Page
-driver.get(data.A2_url)
+driver.get(data.A1_url)
 time.sleep(0.5)
 
 #Finds the Lesson Title's and Scores
@@ -28,5 +28,5 @@ scores = driver.find_elements(By.CSS_SELECTOR, ".s1l6w876.d1sa64gj")
 titles = driver.find_elements(By.CLASS_NAME, "t1duk5k2")
 
 #Combines and Prints previous Properties into one List
-for score, title in zip(scores, titles):
+for title, score in zip(titles, scores):
     print(title.text, score.text)
