@@ -7,11 +7,8 @@ import functions
 #Simplifies Data Tag
 driver = driver_setup.driver
 
-#Finds and enters the Email using #data
-functions.info_enter(driver, By, time, "username", data.email)
-
-#Finds and enters the Password using #data
-functions.info_enter(driver, By, time, "password", data.password)
+#Finds and Enters Login Information from #data and inputs them
+functions.info_enter(driver, By, time, "username", data.email, "password", data.password) 
 
 #Clicks the Login Button
 functions.click(driver, By, time, ".sr1l9xy.primary.b17wp39w")
